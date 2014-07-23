@@ -1,0 +1,15 @@
+{
+  "name": "css",
+  "version": "0.0.0",
+  "homepage": "https://github.com/naomiatkinson/naomiatkinson.github.io",
+  "authors": [
+    "Harry Roberts <harry@csswizardry.com>"
+  ],
+  "license": "N/A",
+  "private": true,
+  "dependencies": {
+    "inuit-starter-kit": "~0.2.7",
+    "inuit-reset": "~0.1.1",
+    "inuit-shared": "~0.1.3"
+  }
+}
