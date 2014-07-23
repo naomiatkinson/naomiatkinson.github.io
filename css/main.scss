@@ -23,6 +23,7 @@
  *
  * BASE
  * Page.................Page-level styles (HTML element).
+ * Page.................Our extension of the inuitcss page partial.
  *
  * OBJECTS
  *
@@ -73,6 +74,7 @@ $inuit-base-background-color:   #36251d;
  * #BASE
  */
 @import "bower_components/inuit-page/base.page";
+@import "base.page";
 
 
 
@@ -81,6 +83,7 @@ $inuit-base-background-color:   #36251d;
 /**
  * #OBJECTS
  */
+@import "bower_components/inuit-list-inline/objects.list-inline";
 
 
 

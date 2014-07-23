@@ -10,6 +10,15 @@
 
     .masthead a {
         color: inherit;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        text-decoration: none;
+        -webkit-transition: 0.2s;
+
+        &:hover,
+        &:focus {
+            border-bottom-color: rgba(255, 255, 255, 0.5);
+        }
+
     }
 
     .masthead__title {
@@ -17,6 +26,23 @@
         @include font-size(15px);
     }
 
+    .masthead__title,
     .masthead__text {
-        @include font-size(30px);
+        font-weight: 300;
+    }
+
+    .masthead__text {
+        @include font-size(24px);
+        max-width: 660px;
+        margin-right: auto;
+        margin-left:  auto;
+
+        @include media-query(lap-and-up) {
+            @include font-size(30px);
+        }
+
+    }
+
+    .masthead__links {
+        text-transform: uppercase;
     }
