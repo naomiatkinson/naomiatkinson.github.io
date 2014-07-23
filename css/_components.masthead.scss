@@ -10,9 +10,14 @@
 
     .masthead a {
         color: inherit;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
         text-decoration: none;
         -webkit-transition: 0.2s;
+           -moz-transition: 0.2s;
+                transition: 0.2s;
+    }
+
+    .masthead__link {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 
         &:hover,
         &:focus {
@@ -29,6 +34,12 @@
     .masthead__title,
     .masthead__text {
         font-weight: 300;
+        margin-bottom: round(3 * $spacing-unit);
+
+        @include media-query(lap-and-up) {
+            margin-bottom: quadruple($spacing-unit);
+        }
+
     }
 
     .masthead__text {
@@ -45,4 +56,13 @@
 
     .masthead__links {
         text-transform: uppercase;
+
+        > li + li {
+            margin-left: double($spacing-unit);
+        }
+
+    }
+
+    .masthead__icon {
+        vertical-align: middle;
     }
