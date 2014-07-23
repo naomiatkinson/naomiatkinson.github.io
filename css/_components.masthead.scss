@@ -5,7 +5,12 @@
 .masthead {
     text-align: center;
     background-color: #94664b;
-    padding: 10%;
+    padding: 15% 5%;
+
+    @include media-query(lap-and-up) {
+        padding: 7.5%;
+    }
+
 }
 
     .masthead a {
@@ -27,13 +32,13 @@
     }
 
     .masthead__title {
-        text-transform: uppercase;
         @include font-size(15px);
+        font-weight: 500;
+        text-transform: uppercase;
     }
 
     .masthead__title,
     .masthead__text {
-        font-weight: 300;
         margin-bottom: round(3 * $spacing-unit);
 
         @include media-query(lap-and-up) {
@@ -44,6 +49,7 @@
 
     .masthead__text {
         @include font-size(24px);
+        font-weight: 300;
         max-width: 660px;
         margin-right: auto;
         margin-left:  auto;
@@ -56,13 +62,30 @@
 
     .masthead__links {
         text-transform: uppercase;
+        font-weight: 500;
+
+        > li {
+
+            @include media-query(palm) {
+                display: block;
+                margin-bottom: halve($spacing-unit);
+            }
+
+        }
 
         > li + li {
-            margin-left: double($spacing-unit);
+
+            @include media-query(lap-and-up) {
+                margin-left: double($spacing-unit);
+            }
+
         }
 
     }
 
     .masthead__icon {
         vertical-align: middle;
+        position: relative;
+        top: -2px;
+        margin-right: 4px;
     }
