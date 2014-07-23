@@ -7,10 +7,13 @@
  *
  * SETTINGS
  * Default..............inuitcss’ default settings.
+ * Responsive...........inuitcss’ responsive settings.
  *
  * TOOLS
  * Functions............inuitcss’ default functions.
  * Mixins...............inuitcss’ default mixins.
+ * Responsive...........inuitcss’ responsive tooling.
+ * Aliases..............Aliases onto inuitcss names.
  *
  * GENERIC
  * Normalize.css........A level playing field.
@@ -20,12 +23,23 @@
  *
  * BASE
  * Page.................Page-level styles (HTML element).
+ *
+ * OBJECTS
+ *
+ * COMPONENTS
+ * Masthead.............Site’s main masthead.
  */
 
 /**
  * #SETTINGS
  */
+$inuit-base-font-size:          15px;
+$inuit-base-line-height:        21px;
+$inuit-base-text-color:         #f0deca;
+$inuit-base-background-color:   #36251d;
 @import "bower_components/inuit-defaults/settings.defaults";
+
+@import "bower_components/inuit-responsive-settings/settings.responsive";
 
 
 
@@ -36,6 +50,8 @@
  */
 @import "bower_components/inuit-functions/tools.functions";
 @import "bower_components/inuit-mixins/tools.mixins";
+@import "bower_components/inuit-responsive-tools/tools.responsive";
+@import "tools.aliases";
 
 
 
@@ -57,3 +73,20 @@
  * #BASE
  */
 @import "bower_components/inuit-page/base.page";
+
+
+
+
+
+/**
+ * #OBJECTS
+ */
+
+
+
+
+
+/**
+ * #COMPONENTS
+ */
+@import "components.masthead";

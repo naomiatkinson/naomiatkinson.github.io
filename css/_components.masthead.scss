@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #MASTHEAD
+\*------------------------------------*/
+
+.masthead {
+    text-align: center;
+    background-color: #94664b;
+    padding: 10%;
+}
+
+    .masthead a {
+        color: inherit;
+    }
+
+    .masthead__title {
+        text-transform: uppercase;
+        @include font-size(15px);
+    }
+
+    .masthead__text {
+        @include font-size(30px);
+    }
