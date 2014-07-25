@@ -30,6 +30,7 @@
  *
  * COMPONENTS
  * Masthead.............Site’s main masthead.
+ * Photo................Big ol’ photo of Naomi.
  */
 
 /**
@@ -95,3 +96,4 @@ $inuit-base-background-color:   #36251d;
  * #COMPONENTS
  */
 @import "components.masthead";
+@import "components.photo";

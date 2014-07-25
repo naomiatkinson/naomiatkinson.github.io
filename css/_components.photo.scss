@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #PHOTO
+\*------------------------------------*/
+
+.photo {
+    width: 100%;
+    height: 0;
+    padding-top: 66.683217478%;
+    background-image: url(/assets/photo-naomi.jpg);
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+            background-size: cover;
+
+    @include media-query(lap-and-up) {
+        background-image: url(/assets/photo-naomi-medium.jpg);
+    }
+
+    @include media-query(desk) {
+        background-image: url(/assets/photo-naomi-large.jpg);
+    }
+
+}
