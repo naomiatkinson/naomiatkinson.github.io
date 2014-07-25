@@ -2,10 +2,17 @@
     #PHOTO
 \*------------------------------------*/
 
+// How big is the large version of the image?
+$image-width:   2014px;
+$image-height:  1343px;
+
+/**
+ * 1. Faux-fluid-height image in the correct ratio.
+ */
 .photo {
     width: 100%;
     height: 0;
-    padding-top: 66.683217478%;
+    padding-top: (($image-height / $image-width) * 100%); /* [1] */
     background-image: url(/assets/photo-naomi.jpg);
     -webkit-background-size: cover;
        -moz-background-size: cover;
