@@ -5,18 +5,87 @@
 .masthead {
     text-align: center;
     background-color: #94664b;
-    padding: 10%;
+    padding: 15% 5%;
+
+    @include media-query(lap-and-up) {
+        padding: 7.5%;
+    }
+
 }
 
     .masthead a {
         color: inherit;
+        text-decoration: none;
+        -webkit-transition: 0.2s;
+           -moz-transition: 0.2s;
+                transition: 0.2s;
+    }
+
+    .masthead__link {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+        &:hover,
+        &:focus {
+            border-bottom-color: rgba(255, 255, 255, 0.5);
+        }
+
     }
 
     .masthead__title {
-        text-transform: uppercase;
         @include font-size(15px);
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .masthead__title,
+    .masthead__text {
+        margin-bottom: round(3 * $spacing-unit);
+
+        @include media-query(lap-and-up) {
+            margin-bottom: quadruple($spacing-unit);
+        }
+
     }
 
     .masthead__text {
-        @include font-size(30px);
+        @include font-size(24px);
+        font-weight: 300;
+        max-width: 660px;
+        margin-right: auto;
+        margin-left:  auto;
+
+        @include media-query(lap-and-up) {
+            @include font-size(30px);
+        }
+
+    }
+
+    .masthead__links {
+        text-transform: uppercase;
+        font-weight: 500;
+
+        > li {
+
+            @include media-query(palm) {
+                display: block;
+                margin-bottom: halve($spacing-unit);
+            }
+
+        }
+
+        > li + li {
+
+            @include media-query(lap-and-up) {
+                margin-left: double($spacing-unit);
+            }
+
+        }
+
+    }
+
+    .masthead__icon {
+        vertical-align: middle;
+        position: relative;
+        top: -2px;
+        margin-right: 4px;
     }
